@@ -8,11 +8,11 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/logout" do
-    erb :logout
+    session.clear
+    erb :"/sessions/logout"
   end
 
   get "/children" do
-    binding.pry
     @care_giver = CareGiver.find(session[:care_giver_id])
     erb :"/children/children"
   end
