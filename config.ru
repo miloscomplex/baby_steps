@@ -5,5 +5,4 @@ if ActiveRecord::Migrator.needs_migration?
 end
 
 use SignupController
-use LoginController
-run ApplicationController
+run SessionController
