@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 20200925211638) do
 
   create_table "care_givers", force: :cascade do |t|
     t.string "name"
-    t.string "user_name"
+    t.string "email"
     t.string "password"
   end
 

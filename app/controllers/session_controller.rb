@@ -28,7 +28,7 @@ class SessionController < Sinatra::Base
   end
 
   post "/login" do
-    @care_giver = CareGiver.find_by(user_name: params["user_name"], password: params["password"])
+    @care_giver = CareGiver.find_by(email: params["email"], password: params["password"])
     if @care_giver
       session[:care_giver_id] = @care_giver.id
       redirect "/children"
