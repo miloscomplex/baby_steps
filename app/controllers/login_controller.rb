@@ -8,18 +8,15 @@ class LoginController < Sinatra::Base
   end
 
   get "/" do
-    erb :"/login/login"
+    erb :"/sessions/login"
   end
 
   get "/login" do
-    erb :"/login/login"
+    erb :"/sessions/login"
   end
 
-  get "/new-account" do
-    erb :"/login/new"
-  end
-
-  post "/children" do
+  post "/login" do
+    # binding.pry
     erb :"/children/children"
   end
 
