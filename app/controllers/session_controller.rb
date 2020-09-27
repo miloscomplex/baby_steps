@@ -1,13 +1,4 @@
-require './config/environment'
-
-class SessionController < Sinatra::Base
-
-  configure do
-    set :public_folder, 'public'
-    set :views, 'app/views'
-    enable :sessions
-    set :session_secret, "secret"
-  end
+class SessionController < ApplicationController
 
   get "/logout" do
     session.clear
@@ -15,8 +6,13 @@ class SessionController < Sinatra::Base
   end
 
   get "/children" do
-    @care_giver = CareGiver.find(session[:care_giver_id])
-    erb :"/children/children"
+    if logged_in?
+      @care_giver = CareGiver.find(session[:care_giver_id])
+      erb :"/children/children"
+    else
+      @message = "<p style='color:red;'>You are not logged in!</p>"
+      erb:"sessions/login"
+    end
   end
 
   get "/" do
