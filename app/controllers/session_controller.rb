@@ -1,7 +1,7 @@
 class SessionController < ApplicationController
 
   get "/logout" do
-    session.clear
+    logout!
     erb :"/sessions/logout"
   end
 
