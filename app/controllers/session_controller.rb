@@ -24,8 +24,8 @@ class SessionController < ApplicationController
   end
 
   post "/login" do
-    @care_giver = CareGiver.find_by(email: params["email"], password: params["password"])
-    if @care_giver
+    @care_giver = CareGiver.find_by(email: params[:email])
+    if @care_giver && @care_giver.authenticate(params[:password])
       session[:care_giver_id] = @care_giver.id
       redirect "/children"
     end
