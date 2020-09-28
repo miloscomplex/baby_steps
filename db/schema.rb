@@ -11,12 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200927032343) do
+ActiveRecord::Schema.define(version: 20200928025532) do
 
   create_table "care_givers", force: :cascade do |t|
     t.string "name"
     t.string "email"
     t.string "password_digest"
+  end
+
+  create_table "children", force: :cascade do |t|
+    t.string  "name"
+    t.string  "birthdate"
+    t.string  "gender"
+    t.integer "care_giver_id"
   end
 
 end
