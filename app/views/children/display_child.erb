@@ -1,14 +1,10 @@
-<h1>Hello <%= @care_giver.name %> </h1>
-<h2>Here's a list of all the children</h2>
+<h1>Hello</h1>
+<h2>Here's is <%= @child.name %> info</h2>
 
+<li><b>Child's name:</b> <%= @child.name %></li>
+<li><b>Child's birthdate:</b> <%= @child.birthdate %></li>
+<li><b>Child's gender:</b> <%= @child.gender %></li>
+<li><b>Child's Care-Giver:</b> <%= @child.care_giver.name %></li>
+<br>
+<!-- Is there a way to meta print?  -->
 <p>'m baby echo park photo booth umami pitchfork, food truck craft beer sriracha chartreuse microdosing selvage adaptogen yr taiyaki air plant selfies. Flannel offal asymmetrical next level bicycle rights. Mixtape gochujang iPhone small batch, gastropub PBR&B you probably haven't heard of them. Street art lo-fi kale chips tbh edison bulb banh mi. Jean shorts twee green juice succulents. Pop-up banjo pinterest food truck roof party, meggings pork belly retro you probably haven't heard of them migas mixtape.</p>
-
-<% @children.each do |child| %>
-  <p>
-    <b>child's name:</b> <%= child.name %><br>
-    <b>child's birthdate:</b> <%= child.birthdate %><br>
-    <b>child's gender:</b> <%= child.gender %><br>
-    <b>child's care-giver:</b> <%= child.care_giver.name %><br>
-    <b><a href="/children/<%= child.id %>">See more details</a></b>
-  </p>
-<% end %>

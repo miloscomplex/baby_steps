@@ -9,3 +9,4 @@ use Rack::MethodOverride
 run ApplicationController
 use SignupController
 use SessionController
+use ChildrenController

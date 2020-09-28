@@ -5,17 +5,6 @@ class SessionController < ApplicationController
     erb :"/sessions/logout"
   end
 
-  get "/children" do
-    if logged_in?
-      @care_giver = CareGiver.find(session[:care_giver_id])
-      @children = Child.all
-      erb :"/children/children"
-    else
-      @message = "<p style='color:red;'>You are not logged in!</p>"
-      erb:"sessions/login"
-    end
-  end
-
   get "/" do
     erb :"/sessions/login"
   end
