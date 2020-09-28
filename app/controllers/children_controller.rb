@@ -12,8 +12,13 @@ class ChildrenController < ApplicationController
     end
 
     get "/children/:id" do
-      @child = Child.find(params[:id])
-      erb :"children/display_child"
+      if logged_in?
+        @child = Child.find(params[:id])
+        erb :"children/display_child"
+      else
+        @message = "<p style='color:red;'>You must log in to see this information!</p>"
+        erb:"sessions/login"
+      end
     end
 
 end
