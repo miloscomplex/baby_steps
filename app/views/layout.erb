@@ -17,7 +17,11 @@
 
     <div class="wrapper">
       <nav>
-        <a href="/">Back to Home</a><span> | </span>
+        <% if logged_in? %>
+          <a href="/children">Return to the list of children</a>
+        <%else %>
+          <a href="/">Back to Home</a><span> | </span>
+        <% end %>
         <% if logged_in? %>
           <a href="/logout">Logout</a>
         <% else %>
