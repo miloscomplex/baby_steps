@@ -33,7 +33,15 @@ class ChildrenController < ApplicationController
     end
 
     post "/children/new" do
-
+      if logged_in?
+        @child = Child.new(name: params["name"], birthdate: params["birthdate"], gender: params["gender"], care_giver_id: current_user.id)
+        if @child.save
+          redirect "/children"
+        end
+      else
+        error_message
+        erb:"sessions/login"
+      end
     end
 
 end
