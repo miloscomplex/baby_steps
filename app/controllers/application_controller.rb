@@ -31,6 +31,10 @@ class ApplicationController < Sinatra::Base
       session.clear
     end
 
+    def error_message
+      @message = "<p style='color:red;'>You are not logged in!</p>"
+    end
+
   end
 
  end

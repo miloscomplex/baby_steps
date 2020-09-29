@@ -6,7 +6,17 @@ class ChildrenController < ApplicationController
         @children = current_user.children
         erb :"/children/children"
       else
-        @message = "<p style='color:red;'>You are not logged in!</p>"
+        error_message
+        erb:"sessions/login"
+      end
+    end
+
+    get "/children/new" do
+      if logged_in?
+        @care_giver = current_user
+        erb :"children/new"
+      else
+        error_message
         erb:"sessions/login"
       end
     end
@@ -19,13 +29,11 @@ class ChildrenController < ApplicationController
           erb :"children/error"
         end
       else
-        @message = "<p style='color:red;'>You must log in to see this information!</p>"
-        erb:"sessions/login"
       end
     end
 
-    get "/children/new" do
-      erb :"children/new"
+    post "/children/new" do
+
     end
 
 end
