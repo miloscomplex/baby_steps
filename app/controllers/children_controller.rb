@@ -14,7 +14,6 @@ class ChildrenController < ApplicationController
     get "/children/:id" do
       if logged_in?
         if @child = current_user.children.find_by(id: params[:id])
-        binding.pry
           erb :"children/display_child"
         else
 
