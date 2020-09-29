@@ -1,6 +1,7 @@
 <h1>Welcome to BabySteps</h1>
 
 <%= @message %>
+<%= "Must include an email and password" if @care_giver && @care_giver.errors.any? %>
 <p>Please Login below:</p>
 
 <form class="Login" action="/login" method="post">

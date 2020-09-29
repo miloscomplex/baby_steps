@@ -18,8 +18,10 @@ class SessionController < ApplicationController
     if @care_giver && @care_giver.authenticate(params[:password])
       session[:care_giver_id] = @care_giver.id
       redirect "/children"
+    else
+      @message = "<p style='color:red;'>Your email or password does not match our records</p>"
+      erb :"/sessions/login"
     end
-    erb :"/sessions/error"
   end
 
 end

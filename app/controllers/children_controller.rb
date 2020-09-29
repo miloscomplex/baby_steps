@@ -16,13 +16,16 @@ class ChildrenController < ApplicationController
         if @child = current_user.children.find_by(id: params[:id])
           erb :"children/display_child"
         else
-
           erb :"children/error"
         end
       else
         @message = "<p style='color:red;'>You must log in to see this information!</p>"
         erb:"sessions/login"
       end
+    end
+
+    get "/children/new" do
+      erb :"children/new"
     end
 
 end

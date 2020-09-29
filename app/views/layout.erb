@@ -19,9 +19,10 @@
       <nav>
         <% if logged_in? %>
           <a href="/children">Return to the list of children</a>
-        <%else %>
-          <a href="/">Back to Home</a><span> | </span>
+        <% else %>
+          <a href="/registration/signup">Signup</a>
         <% end %>
+        <span> | </span>
         <% if logged_in? %>
           <a href="/logout">Logout</a>
         <% else %>
