@@ -1,0 +1,115 @@
+<h1>Update <%= @child.name %>'s log</h1>
+<br>
+
+<% def generate_time
+    time = ""
+    (7..18).each do |hour|
+      (0..3).each do |minute|
+      time << "<option>#{hour}" #:#{minute == 0 ? '00' : minute * 15 }'</option>"
+      end
+    end
+  end %>
+
+<p><a href="/children">Return to the list of children</a></p>
+<form class="edit" action="/children/update" method="post">
+
+  <p><label for="nap">First Nap: </label>
+    <select class="" name="first_nap[time]">
+      <option value=""></option>
+      <% (7..18).each do |hour| %>
+        <% (0..3).each do |minute| %>
+          <option value="<%= hour %>:<%= minute == 0 ? "00" : minute * 15 %>">
+            <%= hour > 12 ? hour - 12 : hour %>:<%= minute == 0 ? "00" : minute * 15 %> <%= hour < 12 ? "AM" : "PM" %>
+          </option>
+        <% end %>
+      <% end %>
+    </select>
+
+    <label for="duration"> Duration: </label>
+    <select class="" name="first_nap[duration]">
+      <option value=""></option>
+      <%  24.times do |length| %>
+        <option value="<%= length * 5 %>"><%= length * 5 %></option>
+      <% end %>
+    </select><span> minutes</span>
+
+  </p>
+
+  <p><label for="nap">Second Nap: </label>
+    <select class="" name="nap[time]">
+      <option value=""></option>
+      <% (7..18).each do |hour| %>
+        <% (0..3).each do |minute| %>
+          <option value="<%= hour %>:<%= minute == 0 ? "00" : minute * 15 %>">
+            <%= hour > 12 ? hour - 12 : hour %>:<%= minute == 0 ? "00" : minute * 15 %> <%= hour < 12 ? "AM" : "PM" %>
+          </option>
+        <% end %>
+      <% end %>
+    </select>
+
+    <label for="duration"> Duration: </label>
+    <select class="" name="second_nap[duration]">
+      <option value=""></option>
+      <%  24.times do |length| %>
+        <option value="<%= length * 5 %>"><%= length * 5 %></option>
+      <% end %>
+    </select><span> minutes</span>
+
+  </p>
+
+  <p>
+    <label for="diaper">Number of Wet Diapers: </label>
+    <select class="" name="diaper[wet]">
+      <% (0..8).each do |diaper| %>
+        <<option value="<%= diaper %>"><%= diaper %></option>
+      <% end %>
+    </select>
+  </p>
+
+  <p>
+    <label for="diaper">Number of Solied Diapers: </label>
+    <select class="" name="diaper[soild]">
+      <% (0..8).each do |diaper| %>
+        <<option value="<%= diaper %>"><%= diaper %></option>
+      <% end %>
+    </select>
+  </p>
+
+  <p>
+    <label for="feeding[first]">First Feeding: </label>
+    <select class="" name="feeding[time]">
+      <option value=""></option>
+      <% (7..18).each do |hour| %>
+        <% (0..3).each do |minute| %>
+          <option value="<%= hour %>:<%= minute == 0 ? "00" : minute * 15 %>">
+            <%= hour > 12 ? hour - 12 : hour %>:<%= minute == 0 ? "00" : minute * 15 %> <%= hour < 12 ? "AM" : "PM" %>
+          </option>
+        <% end %>
+      <% end %>
+    </select>
+  </p>
+
+  <p>
+    <label for="feeding[second]">Second Feeding: </label>
+    <select class="" name="feeding[time]">
+      <option value=""></option>
+      <% (7..18).each do |hour| %>
+        <% (0..3).each do |minute| %>
+          <option value="<%= hour %>:<%= minute == 0 ? "00" : minute * 15 %>">
+            <%= hour > 12 ? hour - 12 : hour %>:<%= minute == 0 ? "00" : minute * 15 %> <%= hour < 12 ? "AM" : "PM" %>
+          </option>
+        <% end %>
+      <% end %>
+    </select>
+  </p>
+
+    <h3>Today's Activities:</h3>
+    <p><input type="checkbox" name="activity[tummy_time]" value=""> Tummy Time</input></p>
+    <p><input type="checkbox" name="activity[story_time]" value=""> Story Time</input></p>
+    <p><input type="checkbox" name="activity[circle_time]" value=""> Circle Time</input></p>
+    <p><input type="checkbox" name="activity[music_time]" value=""> Music Time</input></p>
+    <p><input type="checkbox" name="activity[independent_play_time]" value=""> Independent Play Time</input></p>
+    <p><input type="checkbox" name="activity[art_and_crafts]" value=""> Arts and Crafts</input></p>
+  <p>
+  <input type="submit" name="submit" value="Enter The Log">
+</form>

@@ -46,8 +46,18 @@ class ChildrenController < ApplicationController
     end
 
     get "/children/:id/update" do
+      if logged_in?
+        @child = current_user.children.find_by(id: params[:id])
+        erb :"logs/update"
+      else
+        error_message
+        erb :"sessions/login"
+      end
+    end
 
-      erb :"children/update"
+    post "/children/update" do
+      binding.pry
+      "post children update"
     end
 
 end
