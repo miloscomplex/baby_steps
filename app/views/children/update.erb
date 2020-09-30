@@ -1,0 +1,17 @@
+<h1>Update 's log</h1>
+<form class="edit" action="children/edit" method="post">
+  <label for="Nap">Nap: </label><input type="time" name="[nap]time" value="" min="07:00" max="19:00" step="900">
+  <select class="" name="hour">
+    <option value="">7</option>
+    <option value="">8</option>
+    <option value="">9</option>
+    <option value="">10</option>
+    <option value="">11</option>
+  </select>
+  <span>:</span>
+  <select class="" name="minutes">
+    <% (0..11).each do |num| %>
+      <option value="<%= num * 5 %>"><%= num * 5 %></option>
+    <% end %>
+  </select>
+</form>

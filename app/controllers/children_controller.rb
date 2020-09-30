@@ -24,11 +24,13 @@ class ChildrenController < ApplicationController
     get "/children/:id" do
       if logged_in?
         if @child = current_user.children.find_by(id: params[:id])
-          erb :"children/display_child"
+          erb :"children/child"
         else
           erb :"children/error"
         end
       else
+        error_message
+        erb :"sessions/login"
       end
     end
 
@@ -38,10 +40,14 @@ class ChildrenController < ApplicationController
         if @child.save
           redirect "/children"
         end
-      else
-        error_message
-        erb:"sessions/login"
       end
+      error_message
+      erb :"sessions/login"
+    end
+
+    get "/children/:id/update" do
+
+      erb :"children/update"
     end
 
 end
