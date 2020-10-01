@@ -1,4 +1,4 @@
-<h1>Hello <%= @care_giver.name %> </h1>
+<h1>Hello, <%= @care_giver.name %> </h1>
 <% if @children.empty? %><h2>You have no children under your care</h2>
 <% else %>
 <h2>Here's the list of children under your care</h2>
@@ -7,12 +7,15 @@
 
 <p><a class="button" href="/children/new">Add A Child</a></p>
 <% @children.each do |child| %>
-  <p>
+  <div class="children_list">
     <h3><b>Child's Name:</b> <%= child.name %></h3>
-    <b>Child's Birthdate:</b> <%= child.birthdate %><br>
-    <b>Child's Gender:</b> <%= child.gender %><br>
-    <b>Child's Care-Giver:</b> <%= child.care_giver.name %><br>
-    <b><a href="/children/<%= child.id %>">See more details for <%= child.name %> child.id=<%= child.id %> </a></b><br>
-    <b><a href="/children/<%= child.id %>/update">Enter information in the Daily Log</a></b>
-  </p>
+    <p>
+      <b>Child's Birthdate:</b> <%= child.birthdate %><br>
+      <b>Child's Gender:</b> <%= child.gender == "F" ? "Girl" : "Boy" %><br>
+      <b>Child's Care-Giver:</b> <%= child.care_giver.name %><br>
+      <b><a href="/children/<%= child.id %>">See more details for <%= child.name %> child.id=<%= child.id %> </a></b><br>
+      <!-- if the table exits href /edit instead of create -->
+      <b><a href="/children/<%= child.id %>/create">Enter information in the Daily Log</a></b>
+    </p>
+  </div>
 <% end %>

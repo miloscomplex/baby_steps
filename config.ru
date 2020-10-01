@@ -10,3 +10,4 @@ run ApplicationController
 use SignupController
 use SessionController
 use ChildrenController
+use LogController

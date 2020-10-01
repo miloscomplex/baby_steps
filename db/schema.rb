@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200928025532) do
+ActiveRecord::Schema.define(version: 20201001023813) do
 
   create_table "care_givers", force: :cascade do |t|
     t.string "name"
@@ -24,6 +24,25 @@ ActiveRecord::Schema.define(version: 20200928025532) do
     t.string  "birthdate"
     t.string  "gender"
     t.integer "care_giver_id"
+  end
+
+  create_table "logs", force: :cascade do |t|
+    t.integer "child_id"
+    t.string  "first_nap_time"
+    t.string  "first_nap_duration"
+    t.string  "second_nap_time"
+    t.string  "second_nap_duration"
+    t.integer "wet_diapers"
+    t.integer "solied_diapers"
+    t.string  "first_feeding"
+    t.string  "second_feeding"
+    t.string  "third_feeding"
+    t.boolean "art_and_crafts"
+    t.boolean "gym_time"
+    t.boolean "independent_play_time"
+    t.boolean "music_time"
+    t.boolean "story_time"
+    t.boolean "tummy_time"
   end
 
 end
