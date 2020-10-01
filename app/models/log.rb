@@ -1,3 +1,3 @@
 class Log < ActiveRecord::Base
-  belongs_to :care_giver
+  belongs_to :child
 end

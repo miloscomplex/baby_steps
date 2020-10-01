@@ -1,8 +1,11 @@
 .button {
-  background-color: #99FFFF;
+  color: #444;
+  background-color: lightblue;
   padding: 9px;
-  border-top: 2px solid #99FFFF;
+  border-top: 2px solid lightblue;
   text-decoration: none;
+  display: block;
+  margin: 5px 0;
 }
 
 nav {

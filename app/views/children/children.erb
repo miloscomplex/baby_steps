@@ -13,9 +13,9 @@
       <b>Child's Birthdate:</b> <%= child.birthdate %><br>
       <b>Child's Gender:</b> <%= child.gender == "F" ? "Girl" : "Boy" %><br>
       <b>Child's Care-Giver:</b> <%= child.care_giver.name %><br>
-      <b><a href="/children/<%= child.id %>">See more details for <%= child.name %> child.id=<%= child.id %> </a></b><br>
+      <a class="button" href="/children/<%= child.id %>">See more details for <%= child.name %> child.id=<%= child.id %> </a>
       <!-- if the table exits href /edit instead of create -->
-      <b><a href="/children/<%= child.id %>/create">Enter information in the Daily Log</a></b>
+      <a class="button" href="/children/<%= child.id %>/create">Enter information in the Daily Log</a>
     </p>
   </div>
 <% end %>
