@@ -3,7 +3,7 @@
 <h1>Update <%= @child.name %>'s log</h1>
 <br>
 
-<form class="create" action="/children/create" method="post">
+<form class="create" action="/children/<%= @child.id %>/create" method="post">
 
   <p>
     First Nap:
@@ -52,7 +52,7 @@
   </p>
 
   <p>
-    <label for="wet diaper">Number of Wet Diapers: </label>
+    Number of Wet Diapers:
     <select class="" name="diaper[wet]">
       <% (0..8).each do |diaper| %>
         <<option value="<%= diaper %>"><%= diaper %></option>
@@ -61,8 +61,8 @@
   </p>
 
   <p>
-    <label for="solied diaper">Number of Solied Diapers: </label>
-    <select class="" name="diaper[soild]">
+    Number of Solied Diapers:
+    <select class="" name="diaper[soiled]">
       <% (0..8).each do |diaper| %>
         <<option value="<%= diaper %>"><%= diaper %></option>
       <% end %>
@@ -70,8 +70,8 @@
   </p>
 
   <p>
-    <label for="feeding[first]">First Feeding: </label>
-    <select class="" name="feeding1[time]">
+    First Feeding:
+    <select class="" name="feeding[first]">
       <option value=""></option>
       <% (7..18).each do |hour| %>
         <% (0..3).each do |minute| %>
@@ -84,8 +84,8 @@
   </p>
 
   <p>
-    <label for="feeding[second]">Second Feeding: </label>
-    <select class="" name="feeding2[time]">
+    Second Feeding:
+    <select class="" name="feeding[second]">
       <option value=""></option>
       <% (7..18).each do |hour| %>
         <% (0..3).each do |minute| %>
@@ -98,8 +98,8 @@
   </p>
 
   <p>
-    <label for="feeding[third]">Third Feeding: </label>
-    <select class="" name="feeding3[time]">
+    Third Feeding:
+    <select class="" name="feeding[third]">
       <option value=""></option>
       <% (7..18).each do |hour| %>
         <% (0..3).each do |minute| %>
@@ -113,13 +113,13 @@
 
     <h3>Today's Activities:</h3>
     <ol>
-    <li><input type="checkbox" name="activity[art_and_crafts]" value="Arts and Crafts"> Arts and Crafts</input></li>
-    <li><input type="checkbox" name="activity[gym_time]" value="Gym Time"> Gym Time</input></li>
-    <li><input type="checkbox" name="activity[independent_play_time]" value="Independent Play Time"> Independent Play Time</input></li>
-    <li><input type="checkbox" name="activity[music_time]" value="Music Time"> Music Time</input></li>
-    <li><input type="checkbox" name="activity[sensory_play_time]" value="Sensory Play Time"> Sensory Play Time</input></li>
-    <li><input type="checkbox" name="activity[story_time]" value="Story Time"> Story Time</input></li>
-    <li><input type="checkbox" name="activity[tummy_time]" value="Tummy Time"> Tummy Time</input></li>
+    <li><input type="checkbox" name="activity[arts_and_crafts]" value="1"> Arts and Crafts</input></li>
+    <li><input type="checkbox" name="activity[gym_time]" value="1"> Gym Time</input></li>
+    <li><input type="checkbox" name="activity[independent_play_time]" value="1"> Independent Play Time</input></li>
+    <li><input type="checkbox" name="activity[music_time]" value="1"> Music Time</input></li>
+    <li><input type="checkbox" name="activity[sensory_play_time]" value="1"> Sensory Play Time</input></li>
+    <li><input type="checkbox" name="activity[story_time]" value="1"> Story Time</input></li>
+    <li><input type="checkbox" name="activity[tummy_time]" value="1"> Tummy Time</input></li>
     </ol>
 
 

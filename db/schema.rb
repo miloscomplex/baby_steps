@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20201001023813) do
+ActiveRecord::Schema.define(version: 20201001033519) do
 
   create_table "care_givers", force: :cascade do |t|
     t.string "name"
@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 20201001023813) do
     t.boolean "music_time"
     t.boolean "story_time"
     t.boolean "tummy_time"
+    t.boolean "sensory_play_time"
   end
 
 end
