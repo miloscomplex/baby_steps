@@ -24,6 +24,10 @@
       <% end %>
     <% end %>
     </div>
+    <br>
+    <div>
+      <a class="delete" href="/children/<%= @child.id %>/logs/delete">Delete This Record?</a>
+    </div>
     <% else %>
       <div class="log_attributes">
         There is not a log for this child

@@ -8,6 +8,16 @@
   margin: 5px 0;
 }
 
+.delete {
+  color: #444;
+  background-color: #E0A200;
+  padding: 9px;
+  border-top: 2px solid #E0A200;
+  text-decoration: none;
+  display: block;
+  margin: 5px 0;
+}
+
 nav {
   text-transform: uppercase;
   background-color: lightblue;

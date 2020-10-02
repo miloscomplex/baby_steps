@@ -64,7 +64,10 @@ class LogController < ApplicationController
     if logged_in?
       @child = current_user.children.find_by(id: params[:id])
       @log = @child.logs.find_by(child_id: @child.id)
-      err :"logs/delete"
+      erb :"logs/delete"
+    else
+      error_message
+      erb :"sessions/login"
     end
   end
 
