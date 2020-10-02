@@ -16,7 +16,7 @@
       <!-- if the table exits href /edit instead of create -->
       <!-- Set a if statement to check if log exists then href= /edit  -->
       <% if !child.logs.empty? %>
-          <a class="button" href="/children/<%= child.id %>/logs/edit">Edit fhe information in the Daily Log</a>
+          <a class="button" href="/children/<%= child.id %>/logs/edit">Edit the information in the Daily Log</a>
         <% else %>
           <a class="button" href="/children/<%= child.id %>/logs/create">Enter information into the Daily Log</a>
       <% end %>

@@ -9,7 +9,7 @@
 
 <!-- Set a if statement to check if log exists then href= /edit  -->
 <% if !@child.logs.empty? %>
-    <p><a class="button" href="/children/<%= @child.id %>/logs/edit">Edit fhe information in the Daily Log</a></p>
+    <p><a class="button" href="/children/<%= @child.id %>/logs/edit">Edit the information in the Daily Log</a></p>
   <% else %>
     <p><a href="/children/<%= @child.id %>/logs/create">Enter information into the Daily Log</a></p>
 <% end %>

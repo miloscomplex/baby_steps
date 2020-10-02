@@ -1,5 +1,5 @@
 <h1>Create Your Credentials below:</h1>
-<%= @exists_error ? "The email or name already exists" : "" %>
+
 <form class="create_account" action="/registration" method="post">
   <p><label for="name">Name: </label><input type="text" name="name" pattern="[A-Za-z\s]" value="" required/></p>
   <p><label for="email">Email: </label><input type="text" name="email" value="" required/></p>
