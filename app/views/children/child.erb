@@ -9,10 +9,10 @@
 
 <!-- Set a if statement to check if log exists then href= /edit  -->
 <% if !@child.logs.empty? %>
-    <p><a class="button" href="/children/<%= @child.id %>/edit">Edit fhe information in the Daily Log</a></p>
+    <p><a class="button" href="/children/<%= @child.id %>/logs/edit">Edit fhe information in the Daily Log</a></p>
   <% else %>
-    <p><a href="/children/<%= @child.id %>/create">Enter information into the Daily Log</a></p>
-  <% end %>
+    <p><a href="/children/<%= @child.id %>/logs/create">Enter information into the Daily Log</a></p>
+<% end %>
 <!-- Is there a way to meta print?  -->
 <p>
   <% if !@child.logs.empty? %>
@@ -20,7 +20,7 @@
     <% log.attributes.each do |k,v| %>
       <div class="log_attributes">
       <% if !v.nil? %>
-        <li><%= k %>: <%= v %></li>
+        <li><b><%= k %>:</b> <%= v %></li>
       <% end %>
     <% end %>
     </div>
@@ -30,5 +30,3 @@
       </div>
     <% end %>
 </p>
-
-<p>'m baby echo park photo booth umami pitchfork, food truck craft beer sriracha chartreuse microdosing selvage adaptogen yr taiyaki air plant selfies. Flannel offal asymmetrical next level bicycle rights. Mixtape gochujang iPhone small batch, gastropub PBR&B you probably haven't heard of them. Street art lo-fi kale chips tbh edison bulb banh mi. Jean shorts twee green juice succulents. Pop-up banjo pinterest food truck roof party, meggings pork belly retro you probably haven't heard of them migas mixtape.</p>

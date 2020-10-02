@@ -18,7 +18,7 @@ nav {
 nav div {
   vertical-align: middle;
 }
-nav div a {
+nav div a, span {
   text-decoration: none;
   color: #444;
   vertical-align: middle;

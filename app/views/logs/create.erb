@@ -22,7 +22,7 @@
     <select name="first_nap[duration]">
       <option></option>
       <%  24.times do |length| %>
-        <option value="<%= length * 5 %> minutes"><%= length * 5 %></option>
+        <option value="<%= length * 5 %>"><%= length * 5 %></option>
       <% end %>
     </select><span> minutes</span>
 
@@ -45,7 +45,7 @@
     <select name="second_nap[duration]">
       <option value=""></option>
       <%  24.times do |length| %>
-        <option value="<%= length * 5 %> minutes"><%= length * 5 %></option>
+        <option value="<%= length * 5 %>"><%= length * 5 %></option>
       <% end %>
     </select><span> minutes</span>
 
@@ -113,7 +113,7 @@
 
     <h3>Today's Activities:</h3>
     <ol>
-    <!-- <input type="hidden" name="activity[hidden]" value=""> -->
+    <input type="hidden" name="activity[hidden]" value="">
     <!-- undefined method `[]' for nil:NilClass --if no items are checked w/o hidden input ^^ -->
     <li><input type="checkbox" name="activity[arts_and_crafts]" value="1"> Arts and Crafts</input></li>
     <li><input type="checkbox" name="activity[gym_time]" value="1"> Gym Time</input></li>

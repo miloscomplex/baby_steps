@@ -3,7 +3,6 @@
 <% else %>
 <h2>Here's the list of children under your care</h2>
 <% end %>
-<p>'m baby echo park photo booth umami pitchfork, food truck craft beer sriracha chartreuse microdosing selvage adaptogen yr taiyaki air plant selfies. Flannel offal asymmetrical next level bicycle rights. Mixtape gochujang iPhone small batch, gastropub PBR&B you probably haven't heard of them. Street art lo-fi kale chips tbh edison bulb banh mi. Jean shorts twee green juice succulents. Pop-up banjo pinterest food truck roof party, meggings pork belly retro you probably haven't heard of them migas mixtape.</p>
 
 <p><a class="button" href="/children/new">Add A Child</a></p>
 <% @children.each do |child| %>
@@ -17,9 +16,9 @@
       <!-- if the table exits href /edit instead of create -->
       <!-- Set a if statement to check if log exists then href= /edit  -->
       <% if !child.logs.empty? %>
-          <a class="button" href="/children/<%= child.id %>/edit">Edit fhe information in the Daily Log</a>
+          <a class="button" href="/children/<%= child.id %>/logs/edit">Edit fhe information in the Daily Log</a>
         <% else %>
-          <a class="button" href="/children/<%= child.id %>/create">Enter information into the Daily Log</a>
+          <a class="button" href="/children/<%= child.id %>/logs/create">Enter information into the Daily Log</a>
       <% end %>
       <a class="button" href="/children/<%= child.id %>">See additional information</a>
   </div>

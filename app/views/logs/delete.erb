@@ -1,0 +1,9 @@
+<h1>Your are about to delete <%= @child.name %>'s log</h1>
+
+<h2>Do you wish to proceed?</h2>
+
+<form action="/children/<%= @child.id %>/logs" method="post">
+  <input id="hidden" type="hidden" name="_method" value="delete">
+  <input type="submit" name="delete" value="delete the log">
+
+</form>

@@ -3,8 +3,8 @@
 <h1>Update <%= @child.name %>'s log</h1>
 <br>
 
-<form class="create" action="/children/<%= @child.id %>/create" method="post">
-
+<form class="create" action="/children/<%= @child.id %>/edit" method="post">
+  <input type="hidden" name="_method" value="patch">
   <p>
     First Nap:
     <select class="" name="first_nap[time]">
@@ -30,7 +30,7 @@
       <%  24.times do |increment| %>
         <% length = increment * 5 %>
         <% selected = length.to_s == @log.first_nap_duration ? "selected" : "" %>
-        <option value="<%= length %> minutes" <%= selected %> ><%= length %></option>
+        <option value="<%= length %>" <%= selected %> ><%= length %></option>
       <% end %>
     </select><span> minutes</span>
 
@@ -61,7 +61,7 @@
       <%  24.times do |increment| %>
         <% length = increment * 5 %>
         <% selected = length.to_s == @log.second_nap_duration ? "selected" : "" %>
-        <option value="<%= length %> minutes" <%= selected %> ><%= length %></option>
+        <option value="<%= length %>" <%= selected %> ><%= length %></option>
     <% end %>
     </select><span> minutes</span>
 
