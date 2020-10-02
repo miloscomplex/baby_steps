@@ -32,5 +32,18 @@ class LogController < ApplicationController
   get "/children/:id/edit" do
     "this is the edit page"
     # erb :"logs/edit"
+    if logged_in?
+      @child = current_user.children.find_by(id: params[:id])
+      @log = @child.logs.find_by(child_id: @child.id)
+      erb :"logs/edit"
+    else
+      error_message
+      erb :"sessions/login"
+    end
+  end
+
+  #Commit [E]dits
+  patch "/children/:id/edit" do
+    "this the post edit page"
   end
 end

@@ -11,12 +11,21 @@
 nav {
   text-transform: uppercase;
   background-color: lightblue;
-  padding: 5px;
+  padding: 10px;
+  position: relative;
+}
+
+nav div {
+  vertical-align: middle;
+}
+nav div a {
+  text-decoration: none;
+  color: #444;
+  vertical-align: middle;
 }
 
 .children_list {
   margin-top: 20px;
-
 }
 
 .children h3 {
@@ -35,6 +44,7 @@ li {
   width: 30px;
   background-color: #555;
   display: inline-block;
+  margin-right: 10px;
 }
 @media screen {
   /* --- Reset Styles --- */

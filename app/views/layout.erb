@@ -17,20 +17,22 @@
 
     <div class="wrapper">
       <nav>
-        <div class="logo">
+        <div>
+          <div class="logo">
 
+          </div>
+          <% if logged_in? %>
+            <a href="/children">My Children</a>
+          <% else %>
+            <a href="/registration/signup">Signup</a>
+          <% end %>
+          <span> | </span>
+          <% if logged_in? %>
+            <a href="/logout">Logout</a>
+          <% else %>
+            <a href="/login">Login</a>
+          <% end %>
         </div>
-        <% if logged_in? %>
-          <a href="/children">My Children</a>
-        <% else %>
-          <a href="/registration/signup">Signup</a>
-        <% end %>
-        <span> | </span>
-        <% if logged_in? %>
-          <a href="/logout">Logout</a>
-        <% else %>
-          <a href="/login">Login</a>
-        <% end %>
       </nav><br>
 
         <%= yield %>
