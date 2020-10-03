@@ -1,0 +1,21 @@
+<h1>Hi, <%= @care_giver.name %>.</h1>
+<h2>Edit the information for a child under your care.</h2>
+<p>Enter the information below:</p>
+<form class="new" action="/children/new" method="post">
+  <p>
+    <label for="name">Name: </label>
+    <input type="text" name="name" value="" required />
+  </p>
+  <p>
+    <label for="birthdate">Birthdate: </label>
+    <input type="text" name="birthdate" value="&nbsp;&nbsp; -&nbsp;&nbsp; -&nbsp;&nbsp;  " pattern="\d{2}-\d{2}-\d{2}" required />
+  </p>
+  <p>
+    <label for="gender">Gender: </label>
+    <input type="radio" name="gender" value="M" required> Boy</input>
+    <input type="radio" name="gender" value="F"> Girl</input>
+  </p>
+  <p>
+    <input type="submit" name="submit" value=" Submit Changes ">
+  </p>
+</form>

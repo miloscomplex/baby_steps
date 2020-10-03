@@ -2,8 +2,8 @@
 <%= @message %>
 <p>Fill-in the information below:</p>
 <form class="create_account" action="/registration/signup" method="post">
-  <p><label for="name">Name: </label><input type="text" name="name" pattern="[a-zA-Z\s]+" value="" required/></p>
-  <p><label for="email" >Email: </label><input type="text" name="email" value="" required/></p>
-  <p><label for="Password">Password: </label><input type="password" name="password" value="" required/></p>
+  <p>Name: <input type="text" name="name" pattern="[a-zA-Z\s]+" value="" required/></p>
+  <p>Email: <input type="text" name="email" value="" required/></p>
+  <p>Password: <input type="password" name="password" value="" required/></p>
   <p><input type="submit" name="submit" value=" Create Your Account "></p>
 </form>
