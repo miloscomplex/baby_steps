@@ -8,6 +8,16 @@
   margin: 5px 0;
 }
 
+.button-alt {
+  color: #444;
+  padding: 9px;
+  border-top: 2px solid #D5E8D4;
+  text-decoration: none;
+  display: block;
+  margin: 5px 0;
+  background-color: #D5E8D4;
+}
+
 .delete {
   color: #444;
   background-color: #E0A200;
@@ -18,12 +28,29 @@
   margin: 5px 0;
 }
 
+.error {
+  color: red;
+}
+.buttons a {
+  width: 20%;
+  padding: 10px;
+  display: inline-grid;
+  margin: auto;
+  text-align: center;
+}
+
 .logo {
-  height: 2em;
+  height: 1.7em;
   width: 2em;
   background-color: #555;
   display: inline-block;
   margin-right: 10px;
+  background-image: url(https://lh3.googleusercontent.com/proxy/fOCXEWnm1JA2WGuGbMZ5_vE27wxyoC6BkkiK_FYmrLxnn7wmYfiBtPw43ZZ4hTRVQITWu491IhJuQR9Jar8-xweVo8KTelY);
+  background-size: contain;
+}
+
+input {
+
 }
 
 nav {
@@ -31,19 +58,17 @@ nav {
   background-color: lightblue;
   padding: 10px;
   position: relative;
-  border: 1px solid red
 }
 
 nav div {
   vertical-align: middle;
     border: 1px solid red
+    height: 1em;
 }
 nav div a, span {
   text-decoration: none;
   color: #444;
-  height: 1em;
-  /* vertical-align: middle; */
-  border: 1px solid red
+  vertical-align: middle;
 }
 
 .children_list {
@@ -107,8 +132,9 @@ li {
 
   h3 {
     font-size: 18px;
-    line-height: 36px;
+    line-height: 24px;
     border-top: 2px solid #ddd;
+    padding-top: 12px;
   }
 
   p {

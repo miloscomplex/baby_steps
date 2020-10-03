@@ -4,7 +4,13 @@
 <h2>Here's the list of children under your care</h2>
 <% end %>
 
-<p><a class="button" href="/children/new">Add A Child</a></p>
+<div class="buttons">
+  <a class="button" href="/children/new">Add A Child</a>
+  <% if !@children.empty? %>
+    <a class="delete" href="/children/delete">Remove A Child</a>
+  <% end %>
+</div>
+
 <% @children.each do |child| %>
   <div class="children_list">
     <h3><b>Child's Name:</b> <%= child.name %></h3>
@@ -16,10 +22,10 @@
       <!-- if the table exits href /edit instead of create -->
       <!-- Set a if statement to check if log exists then href= /edit  -->
       <% if !child.logs.empty? %>
-          <a class="button" href="/children/<%= child.id %>/logs/edit">Edit the information in the Daily Log</a>
+          <a class="button" href="/children/<%= child.id %>/logs/edit">Edit the Daily Log</a>
         <% else %>
           <a class="button" href="/children/<%= child.id %>/logs/create">Enter information into the Daily Log</a>
       <% end %>
-      <a class="button" href="/children/<%= child.id %>">See additional information</a>
+      <a class="button-alt" href="/children/<%= child.id %>">See additional information</a>
   </div>
 <% end %>

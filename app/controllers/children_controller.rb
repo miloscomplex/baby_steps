@@ -17,7 +17,18 @@ class ChildrenController < ApplicationController
       erb :"children/new"
     else
       error_message
-      erb:"sessions/login"
+      erb :"sessions/login"
+    end
+  end
+
+  get "/children/delete" do
+    if logged_in?
+      @care_giver = current_user
+      @children = current_user.children
+      erb :"children/delete"
+    else
+      error_message
+      erb :"sessions/login"
     end
   end
 
@@ -45,4 +56,18 @@ class ChildrenController < ApplicationController
     erb :"sessions/login"
   end
 
+  delete "/children/delete" do
+    if logged_in?
+      @child = current_user.children.find_by(id: params[:child_id])
+      if !@child.logs.empty?
+        @log = @child.logs.find_by(child_id: @child.id)
+        @log.delete
+      end
+      @child.delete
+
+      redirect to "/children"
+    end
+    error_message
+    erb :"sessions/login"
+  end
 end

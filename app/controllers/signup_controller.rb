@@ -4,7 +4,7 @@ class SignupController < ApplicationController
     erb :"/registration/signup"
   end
 
-  post "/registration" do
+  post "/registration/signup" do
     #check if the email name combo exists -- done
     #should the email be made lowercase --- stretch feature
     #name cannot contain numbers, periods, etc -- done
@@ -22,7 +22,7 @@ class SignupController < ApplicationController
     if !@name_email
       user_exists!
     end
-    erb :"/registration/error"
+    erb :"/registration/signup"
   end
 
   get "/registration/error" do

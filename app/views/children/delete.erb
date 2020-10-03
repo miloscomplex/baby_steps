@@ -1,0 +1,17 @@
+<h1>Warning! <%= @care_giver.name %></h1>
+  <h3>Your are about to delete a child from the database and the log(s) associated with them</h3>
+<br>
+<p>Select the child from the drop-down</p>
+<form action="/children/delete" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <p>Child:
+    <select class="" name="child_id">
+      <option value=""></option>
+      <% @children.each do |child| %>
+        <option value="<%= child.id %>"><%= child.name %></option>
+      <% end %>
+    </select>
+  </p>
+  <input type="submit" name="delete" value=" Delete The Child ">
+
+</form>

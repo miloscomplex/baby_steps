@@ -32,11 +32,11 @@ class ApplicationController < Sinatra::Base
     end
 
     def error_message
-      @message = "<p style='color:red;'>You are not logged in!</p>"
+      @message = "<p class='error'>You are not logged in!</p>"
     end
 
     def user_exists!
-      @message = "<p style='color:red;'>The email or name is already registered!"
+      @message = "<p class='error'>The email or name is already registered!"
     end
   end
 
