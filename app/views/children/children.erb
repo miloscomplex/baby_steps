@@ -8,7 +8,7 @@
   <a class="button" href="/children/new">Add A Child</a>
   <% if !@children.empty? %>
     <a class="delete-button" href="/children/delete">Remove A Child</a>
-    <a href="/children/edit" class="button-alt">Edit The Information</a>
+    <!-- <a href="/children/edit" class="button-alt">Edit The Information</a> -->
   <% end %>
 </div>
 
@@ -22,11 +22,13 @@
     </p>
       <!-- if the table exits href /edit instead of create -->
       <!-- Set a if statement to check if log exists then href= /edit  -->
-      <% if !child.logs.empty? %>
-          <a class="button" href="/children/<%= child.id %>/logs/edit">Edit the Daily Log</a>
-        <% else %>
-          <a class="button" href="/children/<%= child.id %>/logs/create">Enter information into the Daily Log</a>
-      <% end %>
-      <a class="button-alt" href="/children/<%= child.id %>">See additional information</a>
+      <div class="buttons">
+        <% if !child.logs.empty? %>
+            <a class="button-alt" href="/children/<%= child.id %>/logs/edit">Edit the Daily Log</a>
+          <% else %>
+            <a class="button-alt" href="/children/<%= child.id %>/logs/create">Enter information into the Daily Log</a>
+        <% end %>
+        <a href="/children/<%= child.id %>/edit" class="button">Edit The Child's Information</a>
+      <a class="button-alt" href="/children/<%= child.id %>">See The Daily Log</a>      </div>
   </div>
 <% end %>

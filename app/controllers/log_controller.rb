@@ -72,9 +72,14 @@ class LogController < ApplicationController
   end
 
   delete "/children/:id/logs" do
-    @child = current_user.children.find_by(id: params[:id])
-    @log = @child.logs.find_by(child_id: @child.id)
-    @log.delete
-    redirect to "/children"
+    if logged_in?
+      @child = current_user.children.find_by(id: params[:id])
+      @log = @child.logs.find_by(child_id: @child.id)
+      @log.delete
+      redirect to "/children"
+    else
+      error_message
+      erb :"sessions/login"
+    end
   end
 end

@@ -32,10 +32,15 @@ class ChildrenController < ApplicationController
     end
   end
 
-  get "/children/edit" do
-    @care_giver = current_user
-    erb :"/children/edit"
-
+  get "/children/:id/edit" do
+    if logged_in?
+      @care_giver = current_user
+      @child = current_user.children.find_by(id: params[:id])
+      erb :"/children/edit"
+    else
+      error_message
+      erb :"sessions/login"
+    end
   end
 
   get "/children/:id" do

@@ -1,38 +1,45 @@
 .button {
   color: #444;
-  background-color: lightblue;
+  background-color: #cfdce3;
   padding: 9px;
-  border-top: 2px solid lightblue;
+  border-top: 2px solid #cfdce3;
   text-decoration: none;
   display: block;
   margin: 5px 0;
+  text-transform: uppercase;
+  font-size: 13px;
 }
 
 .button-alt {
   color: #444;
   padding: 9px;
-  border-top: 2px solid #D5E8D4;
+  border-top: 2px solid #dec4c4;
   text-decoration: none;
   display: block;
   margin: 5px 0;
-  background-color: #D5E8D4;
+  background-color: #dec4c4;
+  text-transform: uppercase;
+  font-size: 13px;
 }
 
 .delete-button {
   color: #444;
-  background-color: #E0A200;
+  background-color: #e4d0ab;
   padding: 9px;
-  border-top: 2px solid #E0A200;
+  border-top: 2px solid #e4d0ab;
   text-decoration: none;
   display: block;
   margin: 5px 0;
+  text-transform: uppercase;
+  font-size: 13px;
 }
 
 .error {
   color: red;
+
 }
 .buttons a {
-  width: 20%;
+  width: 25%;
   padding: 10px;
   display: inline-grid;
   margin: auto;
@@ -40,13 +47,19 @@
 }
 
 .logo {
-  height: 1.7em;
-  width: 2em;
-  background-color: #555;
+  height: 5em;
+  width: 5em;
+  background-color: none;
   display: inline-block;
   margin-right: 10px;
-  background-image: url(https://lh3.googleusercontent.com/proxy/fOCXEWnm1JA2WGuGbMZ5_vE27wxyoC6BkkiK_FYmrLxnn7wmYfiBtPw43ZZ4hTRVQITWu491IhJuQR9Jar8-xweVo8KTelY);
+  background-image: url("/images/blocks.png");
   background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}
+
+.logo img {
+  object-fit: contain;
 }
 
 input {
@@ -55,16 +68,16 @@ input {
 
 nav {
   text-transform: uppercase;
-  background-color: lightblue;
+  background-color: #cfdce3;
   padding: 10px;
-  position: relative;
+  height: 5em;
 }
 
 nav div {
-  vertical-align: middle;
-    border: 1px solid red
-    height: 1em;
+    /* border: 1px solid red; */
+    height: 5em;
 }
+
 nav div a, span {
   text-decoration: none;
   color: #444;
@@ -101,7 +114,7 @@ li {
 
   /* --- Welcome Page Styles --- */
   body {
-    background-color: lightblue;
+    background-color: #dbdcd9;
     color: #333;
     font-family: Sans-Serif;
     line-height: 18px;
