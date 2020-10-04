@@ -47,7 +47,7 @@
 }
 
 .logo {
-  height: 5em;
+  height: 10em;
   width: 5em;
   background-color: none;
   display: inline-block;
@@ -56,6 +56,7 @@
   background-size: contain;
   background-repeat: no-repeat;
   vertical-align: middle;
+  background-position: center;
 }
 
 .logo img {
@@ -70,17 +71,19 @@ nav {
   text-transform: uppercase;
   background-color: #cfdce3;
   padding: 10px;
-  height: 5em;
+  height: 10em;
+  background-image: url(/images/day_care_floor.jpg);
+  background-size: cover;
+  background-position: bottom;
 }
 
 nav div {
     /* border: 1px solid red; */
-    height: 5em;
 }
 
 nav div a, span {
   text-decoration: none;
-  color: #444;
+  color: #FFF;
   vertical-align: middle;
 }
 

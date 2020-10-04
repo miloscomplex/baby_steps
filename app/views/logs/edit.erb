@@ -172,7 +172,11 @@
         <input type="checkbox" name="activity[tummy_time]" value="1" <%= @log.tummy_time ? "checked" : "" %>> Tummy Time</input>
       </li>
     </ol>
+    <br>
     <p>
+      Additional Notes:<br>
+      <textarea name="notes" rows="4" cols="50"> <%= @log.notes %></textarea>
+    </p>
   <p>
     <input type="submit" name="submit" value=" Submit Your Edits ">
   </p>

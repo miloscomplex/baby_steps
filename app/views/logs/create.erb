@@ -113,18 +113,22 @@
 
     <h3>Today's Activities:</h3>
     <ol>
-    <input type="hidden" name="activity[hidden]" value="">
-    <!-- undefined method `[]' for nil:NilClass --if no items are checked w/o hidden input ^^ -->
-    <li><input type="checkbox" name="activity[arts_and_crafts]" value="1"> Arts and Crafts</input></li>
-    <li><input type="checkbox" name="activity[gym_time]" value="1"> Gym Time</input></li>
-    <li><input type="checkbox" name="activity[independent_play_time]" value="1"> Independent Play Time</input></li>
-    <li><input type="checkbox" name="activity[music_time]" value="1"> Music Time</input></li>
-    <li><input type="checkbox" name="activity[sensory_play_time]" value="1"> Sensory Play Time</input></li>
-    <li><input type="checkbox" name="activity[story_time]" value="1"> Story Time</input></li>
-    <li><input type="checkbox" name="activity[tummy_time]" value="1"> Tummy Time</input></li>
+      <input type="hidden" name="activity[hidden]" value="">
+      <!-- undefined method `[]' for nil:NilClass --if no items are checked w/o hidden input ^^ -->
+      <li><input type="checkbox" name="activity[arts_and_crafts]" value="1"> Arts and Crafts</input></li>
+      <li><input type="checkbox" name="activity[gym_time]" value="1"> Gym Time</input></li>
+      <li><input type="checkbox" name="activity[independent_play_time]" value="1"> Independent Play Time</input></li>
+      <li><input type="checkbox" name="activity[music_time]" value="1"> Music Time</input></li>
+      <li><input type="checkbox" name="activity[sensory_play_time]" value="1"> Sensory Play Time</input></li>
+      <li><input type="checkbox" name="activity[story_time]" value="1"> Story Time</input></li>
+      <li><input type="checkbox" name="activity[tummy_time]" value="1"> Tummy Time</input></li>
     </ol>
+    <br>
     <p>
-  <p>
-    <input type="submit" name="submit" value=" Enter The Log ">
-  </p>
+      Additional Notes:<br>
+      <textarea name="notes" rows="4" cols="50"></textarea>
+    </p>
+    <p>
+      <input type="submit" name="submit" value=" Enter The Log ">
+    </p>
 </form>
