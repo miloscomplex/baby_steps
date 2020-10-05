@@ -1,7 +1,8 @@
 <h1>Hi, <%= @care_giver.name %>.</h1>
 <h2>Edit the information for a child under your care.</h2>
 <p>Enter the information below:</p>
-<form class="new" action="/children/new" method="post">
+<form action="/children/<%= @child.id %>/edit" method="post">
+  <input type="hidden" name="_method" value="patch">
   <p>
     <label for="name">Name: </label>
     <input type="text" name="name" value="<%= @child.name %>" required />
@@ -16,6 +17,6 @@
     <input type="radio" name="gender" value="F" <%= @child.gender == "F" ? "checked" : "" %> > Girl</input>
   </p>
   <p>
-    <input type="submit" name="submit" value=" Submit Changes ">
+    <input type="submit" name="submit" value=" Submit Edits ">
   </p>
 </form>

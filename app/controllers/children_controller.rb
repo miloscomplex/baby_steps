@@ -43,6 +43,18 @@ class ChildrenController < ApplicationController
     end
   end
 
+  patch "/children/:id/edit" do
+    if logged_in?
+      @child = current_user.children.find_by(id: params[:id])
+      @child.update(name: params["name"], birthdate: params["birthdate"], gender: params["gender"], care_giver_id: current_user.id)
+
+      redirect "/children/#{@child.id}"
+    else
+      error_message
+      erb :"sesions/login"
+    end
+  end
+
   get "/children/:id" do
     if logged_in?
       if @child = current_user.children.find_by(id: params[:id])
