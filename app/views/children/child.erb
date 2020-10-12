@@ -18,9 +18,11 @@
   <% if !@child.logs.empty? %>
     <% log = @child.logs.find_by(child_id: @child.id) %>
     <% log.attributes.each do |k,v| %>
+
       <div class="log_attributes">
-      <% if !v.nil? %>
-        <li><b><%= k %>:</b> <%= v %></li>
+        <% #binding.pry %>
+      <% if !v.nil? || k == "id" %>
+        <li class="log-list"><b><%= k.gsub("_", " ").capitalize %>:</b> <%= v %></li>
       <% end %>
     <% end %>
     </div>
