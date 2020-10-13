@@ -18,7 +18,6 @@
     <p>
       <b>Child's Birthdate:</b> <%= child.birthdate %><br>
       <b>Child's Gender:</b> <%= child.gender == "F" ? "Girl" : "Boy" %><br>
-      <b>Child's Care-Giver:</b> <%= child.care_giver.name %><br>
     </p>
       <!-- if the table exits href /edit instead of create -->
       <!-- Set a if statement to check if log exists then href= /edit  -->
@@ -26,12 +25,12 @@
         <% if !child.logs.empty? %>
           <a class="button-alt" href="/children/<%= child.id %>">See The Daily Log</a>
         <% end %>
-        <a href="/children/<%= child.id %>/edit" class="button">Edit The Child's Information</a>
         <% if !child.logs.empty? %>
             <a class="button-alt" href="/children/<%= child.id %>/logs/edit">Edit the Daily Log</a>
           <% else %>
             <a class="button-alt" href="/children/<%= child.id %>/logs/create">Create a Daily Log</a>
         <% end %>
+          <a href="/children/<%= child.id %>/edit" class="button">Edit The Child's Info</a>
       </div>
   </div>
 <% end %>

@@ -5,7 +5,7 @@ Baby and toddlers, while being looked after they have diaper changes, feedings, 
 A User can create an account, log in, denote numerous items individually for each child, add additional children, and delete an individual child's record.
 
 A quick rundown of all the items captured are
-- A child's name 
+- A child's name
 - A child's birthdate
 - A child's gender
 - First nap and duration
@@ -20,9 +20,10 @@ A quick rundown of all the items captured are
 
 ## Installation
 
-Clone and download the entire repositories files.
+Clone and download the entire repositories files. In the terminal type:
 
 ```
+git clone https://github.com/miloscomplex/baby_steps.git
 bundle install
 ```
 To confirm you have the correct gem files.

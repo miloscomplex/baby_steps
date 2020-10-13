@@ -1,10 +1,11 @@
+<p><a href="/children">Return to the list of children</a></p>
+
 <h1>Hello</h1>
 <h2>Here is <%= @child.name %>'s info</h2>
 
 <li><b>Child's name:</b> <%= @child.name %></li>
 <li><b>Child's birthdate:</b> <%= @child.birthdate %></li>
 <li><b>Child's gender:</b> <%= @child.gender == "F" ? "Girl" : "Boy" %></li>
-<li><b>Child's Care-Giver:</b> <%= @child.care_giver.name %></li>
 <br>
 
 <!-- Set a if statement to check if log exists then href= /edit  -->
@@ -21,7 +22,7 @@
       <% @log.attributes.each do |k,v| %>
         <% #binding.pry %>
         <% if v != nil && v != 0 && v != "" && k != "id" && k != "child_id" %>
-          <li class="log-list"><b><%= k.gsub("_", " ").capitalize %>:</b> <%= v == true ? "[x]" : v  %></li>
+          <li class="log-list"><b><%= k.gsub("solied_diapers","soiled diapers").gsub("_", " ").capitalize %>:</b> <%= v == true ? "[x]" : v  %></li>
         <% end %>
       <% end %>
       </div>

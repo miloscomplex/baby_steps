@@ -7,7 +7,7 @@
   display: block;
   margin: 5px 0;
   text-transform: uppercase;
-  font-size: 11px;
+  font-size: 12px;
   line-height: 14px;
   border-radius: 10px;
 }
@@ -20,7 +20,7 @@
   display: block;
   margin: 5px 0;
   text-transform: uppercase;
-  font-size: 11px;
+  font-size: 12px;
   line-height: 14px;
   border-radius: 10px;
 }
@@ -33,7 +33,7 @@
   display: block;
   margin: 5px 0;
   text-transform: uppercase;
-  font-size: 11px;
+  font-size: 12px;
   line-height: 14px;
   border-radius: 10px;
 }
@@ -61,6 +61,7 @@
   background-repeat: no-repeat;
   vertical-align: middle;
   background-position: center;
+
 }
 
 .logo img {

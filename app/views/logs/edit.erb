@@ -78,7 +78,7 @@
 
   <p>
     Number of Soiled Diapers:
-    <select class="" name="diaper[soiled]">
+    <select class="" name="diaper[solied]">
       <% (0..8).each do |diaper| %>
         <option value="<%= diaper %>" <%= diaper == @log.solied_diapers ? "selected" : "" %> ><%= diaper %></option>
       <% end %>
