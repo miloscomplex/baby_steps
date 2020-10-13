@@ -1,37 +1,38 @@
 .button {
   color: #444;
-  background-color: #cfdce3;
+  background-color: #fff;
+  border: 3px solid #cfdce3;
   padding: 9px;
-  border-top: 2px solid #cfdce3;
   text-decoration: none;
   display: block;
   margin: 5px 0;
   text-transform: uppercase;
   font-size: 13px;
+  border-radius: 10px;
 }
 
 .button-alt {
   color: #444;
   padding: 9px;
-  border-top: 2px solid #dec4c4;
+  border: 3px solid #dec4c4;
   text-decoration: none;
   display: block;
   margin: 5px 0;
-  background-color: #dec4c4;
   text-transform: uppercase;
   font-size: 13px;
+  border-radius: 10px;
 }
 
 .delete-button {
   color: #444;
-  background-color: #e4d0ab;
   padding: 9px;
-  border-top: 2px solid #e4d0ab;
+  border: 3px solid #e4d0ab;
   text-decoration: none;
   display: block;
   margin: 5px 0;
   text-transform: uppercase;
   font-size: 13px;
+  border-radius: 10px;
 }
 
 .error {
@@ -87,7 +88,7 @@ nav div {
 
 nav div a, span {
   text-decoration: none;
-  color: #444;
+  color: #fff;
   vertical-align: middle;
 }
 
