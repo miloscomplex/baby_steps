@@ -5,6 +5,9 @@ Baby and toddlers, while being looked after they have diaper changes, feedings, 
 A User can create an account, log in, denote numerous items individually for each child, add additional children, and delete an individual child's record.
 
 A quick rundown of all the items captured are
+- A child's name 
+- A child's birthdate
+- A child's gender
 - First nap and duration
 - Second nap and duration
 - Number of wet diapers
