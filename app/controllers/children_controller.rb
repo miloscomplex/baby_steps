@@ -58,6 +58,7 @@ class ChildrenController < ApplicationController
   get "/children/:id" do
     if logged_in?
       if @child = current_user.children.find_by(id: params[:id])
+        @log = @child.logs.find_by(child_id: @child.id)
         erb :"children/child"
       else
         erb :"children/error"

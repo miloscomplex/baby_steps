@@ -16,20 +16,19 @@
 <!-- Is there a way to meta print?  -->
 <p>
   <% if !@child.logs.empty? %>
-    <% log = @child.logs.find_by(child_id: @child.id) %>
-    <% log.attributes.each do |k,v| %>
+    <div class="log_attributes">
 
-      <div class="log_attributes">
+      <% @log.attributes.each do |k,v| %>
         <% #binding.pry %>
-      <% if !v.nil? || k == "id" %>
-        <li class="log-list"><b><%= k.gsub("_", " ").capitalize %>:</b> <%= v %></li>
+      <% if !v.nil? && k != "id" && k != "child_id" %>
+        <li class="log-list"><b><%= k.gsub("_", " ").capitalize %>:</b> <%= v == true ? "[x]" : v  %></li>
       <% end %>
     <% end %>
-    </div>
-    <br>
-    <div>
-      <a class="delete-button" href="/children/<%= @child.id %>/logs/delete">Delete This Record?</a>
-    </div>
+      </div>
+      <br>
+      <div>
+        <a class="delete-button" href="/children/<%= @child.id %>/logs/delete">Delete This Record?</a>
+      </div>
     <% else %>
       <div class="log_attributes">
         There is not a log for this child
