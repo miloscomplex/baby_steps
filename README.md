@@ -1,12 +1,26 @@
 # baby_steps
 
-Baby and toddlers, while being looked after they have diaper changes, feedings, naps & activities throughout the day. Care-Givers need a way to track the information for the children they are looking after. A User can create an account, log in, denote all of those items individually for each child, add additional children, and delete an individual child's record.
+Baby and toddlers, while being looked after they have diaper changes, feedings, naps & activities throughout the day. Care-Givers need a way to track the information for the children they are looking after.
+
+A User can create an account, log in, denote numerous items individually for each child, add additional children, and delete an individual child's record.
+
+A quick rundown of all the items captured are
+- First nap and duration
+- Second nap and duration
+- Number of wet diapers
+- Number of soiled diapers
+- First feeding time
+- Second feeding time
+- Third feeding time
+- A checklist of activities, such as Gym Time and Story Time
+- A an area to enter additional notes
 
 ## Installation
 
 Clone and download the entire repositories files.
 
 ```
+
 bundle install
 ```
 To confirm you have the correct gem files.
