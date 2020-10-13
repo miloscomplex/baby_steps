@@ -20,10 +20,10 @@
 
       <% @log.attributes.each do |k,v| %>
         <% #binding.pry %>
-      <% if !v.nil? && k != "id" && k != "child_id" %>
-        <li class="log-list"><b><%= k.gsub("_", " ").capitalize %>:</b> <%= v == true ? "[x]" : v  %></li>
+        <% if v != nil && v != 0 && v != "" && k != "id" && k != "child_id" %>
+          <li class="log-list"><b><%= k.gsub("_", " ").capitalize %>:</b> <%= v == true ? "[x]" : v  %></li>
+        <% end %>
       <% end %>
-    <% end %>
       </div>
       <br>
       <div>
