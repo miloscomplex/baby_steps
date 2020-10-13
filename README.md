@@ -13,14 +13,13 @@ A quick rundown of all the items captured are
 - Second feeding time
 - Third feeding time
 - A checklist of activities, such as Gym Time and Story Time
-- A an area to enter additional notes
+- An area to enter additional notes
 
 ## Installation
 
 Clone and download the entire repositories files.
 
 ```
-
 bundle install
 ```
 To confirm you have the correct gem files.
@@ -33,13 +32,13 @@ shotgun
 ```
 
 Then open a web-browser with the URL [http://localhost:9393/](http://localhost:9393/) to view the Baby Steps login page. Either use the credentials for a preexisting user.
+
 ```
 email: mike@mike.com
 password: 1234
-
 ```
 
-You create a new account to start a new care-giver account.
+You can create a new account to start a new care-giver account.
 
 [http://localhost:9393/registration/signup](http://localhost:9393/registration/signup)
 
