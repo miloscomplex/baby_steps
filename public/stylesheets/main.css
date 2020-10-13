@@ -47,12 +47,12 @@
 }
 
 .logo {
-  height: 10em;
-  width: 5em;
+  height: 15em;
+  width: 9em;
   background-color: none;
   display: inline-block;
   margin-right: 10px;
-  background-image: url("/images/blocks.png");
+  background-image: url("/images/baby_steps_logo-small.png");
   background-size: contain;
   background-repeat: no-repeat;
   vertical-align: middle;
@@ -76,7 +76,7 @@ nav {
   background-color: #cfdce3;
   padding: 10px;
   height: 10em;
-  background-image: url(/images/day_care_floor.jpg);
+  background-image: url(/images/daycare_fade.jpg);
   background-size: cover;
   background-position: bottom;
 }
@@ -87,7 +87,7 @@ nav div {
 
 nav div a, span {
   text-decoration: none;
-  color: #FFF;
+  color: #444;
   vertical-align: middle;
 }
 
