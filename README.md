@@ -9,7 +9,7 @@ Clone and download the entire repositories files.
 ```
 bundle install
 ```
-To make sure you have the correct gemfiles
+To confirm you have the correct gem files.
 
 ## Usage
 
@@ -18,23 +18,21 @@ In the terminal type:
 shotgun
 ```
 
-Then open a web-brower with the url [http://localhost:9393/](http://localhost:9393/) to view the Baby Steps log-in page. Either use the credentials for a preexisting user.
+Then open a web-browser with the URL [http://localhost:9393/](http://localhost:9393/) to view the Baby Steps login page. Either use the credentials for a preexisting user.
 ```
 email: mike@mike.com
 password: 1234
 
 ```
 
-You create an new account to start a fresh care-giver login
+You create a new account to start a new care-giver account.
 
 [http://localhost:9393/registration/signup](http://localhost:9393/registration/signup)
 
-After you are logged-in you will be redirected to the children page were you can add, remove, edit or create a new child-log.
+After you log in, you will be redirected to the children page to add, remove, edit, or create a new child-log.
 
 ## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
+Pull requests are welcome. For significant changes, bug fixes, or collaborations, please open an issue to discuss what you would like to change. https://github.com/miloscomplex/baby_steps
 
 ## License
-[MIT](https://choosealicense.com/licenses/mit/)
+This project is available as open-source under the terms of the [MIT License.](https://choosealicense.com/licenses/mit/)
