@@ -35,12 +35,16 @@ class ChildrenController < ApplicationController
   get "/children/:id/edit" do
     if logged_in?
       @care_giver = current_user
-      @child = current_user.children.find_by(id: params[:id])
+      set_child
       erb :"/children/edit"
     else
       error_message
       erb :"sessions/login"
     end
+  end
+
+  get "/error" do
+    erb :"children/error"
   end
 
   patch "/children/:id/edit" do
@@ -93,5 +97,13 @@ class ChildrenController < ApplicationController
     end
     error_message
     erb :"sessions/login"
+  end
+
+  private
+  def set_child
+    @child = current_user.children.find_by(id: params[:id])
+    if !@child
+      redirect "/error"
+    end
   end
 end
