@@ -43,7 +43,7 @@ class ChildrenController < ApplicationController
     end
   end
 
-  get "/error" do
+  get "/children/error" do
     erb :"children/error"
   end
 
@@ -103,7 +103,7 @@ class ChildrenController < ApplicationController
   def set_child
     @child = current_user.children.find_by(id: params[:id])
     if !@child
-      redirect "/error"
+      redirect "children/error"
     end
   end
 end
